@@ -1,0 +1,17 @@
+def how_many_gifts(max_budget, gifts)
+  gifts_sort = gifts.sort #сортируем массив по возрастанию
+  i = 0 #счетчик подарков
+gifts_sort.each do |x| #цикл в котором идем по порядку сортированного массива и прибавляем его стоимость к счетчику считая общую сумму
+    
+    if x<=max_budget
+       if max_budget>0
+          max_budget = max_budget-x
+        i = i+1 
+       end
+    else
+       i = i
+    end
+  
+end
+return i
+end
