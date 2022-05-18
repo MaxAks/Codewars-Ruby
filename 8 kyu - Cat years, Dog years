@@ -1,0 +1,29 @@
+def human_years_cat_years_dog_years(human_years)
+  # Your code here!
+  cat_eyars = 0
+  dog_eyars = 0
+  if human_years == 1
+      cat_eyars = 15
+      dog_eyars = 15
+      elsif human_years == 2
+      cat_eyars = 15+9
+      dog_eyars = 15+9
+  else
+      cat_eyars = 24 +(human_years-2)*4
+      dog_eyars = 24 +(human_years-2)*5
+  end
+  #return [0,0,0]
+  puts cat_eyars
+  puts dog_eyars
+end 
+human_years_cat_years_dog_years(3)
+=begin
+Cat Years
+15 cat years for first year
++9 cat years for second year
++4 cat years for each year after that
+Dog Years
+15 dog years for first year
++9 dog years for second year
++5 dog years for each year after that
+=end
