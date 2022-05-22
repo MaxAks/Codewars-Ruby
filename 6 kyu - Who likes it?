@@ -1,0 +1,25 @@
+def likes(names)
+  #your code here
+  # здесь везде return стоит вместо puts для того, чтобы пройти приемку на сайте codewars
+  n_l = names.length
+others = (n_l - 2).to_s
+if n_l == 0
+    return "no one likes this"
+end
+
+if n_l == 1
+    return names[0] + " likes this"
+end
+
+if n_l == 2
+    return names[0]+ " and " + names[1] + " like this"
+end
+
+if n_l == 3
+    return names[0]+ ", " + names[1] + " and " + names[2] + " like this"
+end
+
+if n_l >= 4
+    return names[0]+ ", " + names[1] + " and " + others + " others" + " like this"
+end
+end
