@@ -1,0 +1,24 @@
+def validate_pin(pin)
+  #return true or false
+  pin_chek = pin.to_s # назначаем в качестве строки
+  pin_chek.downcase! # ВАЖНО! В КОДЕ МОГУТ БЫТЬ СТРОЧНЫЕ БУКВЫ И ТОГДА ПЕРЕБОР МАССИВА БУДЕТ ОШИБОЧНЫМ ПОЭТОМУ ПЕРЕВОДИМ ВСЕ БУКВЫ В НИЖНИЙ РЕГИСТР
+key = ("a".."z").to_a
+pin_answ = true
+key.each do |x|
+
+if pin_chek.include? " " or pin_chek.include? "." or pin_chek.include? "," or pin_chek.include? "!" or pin_chek.include? "?" or pin_chek.include? "*" or pin_chek.include? "\n" or pin_chek.include? "\r" or pin_chek.include? "-"
+      pin_answ = false
+    end # ЗДЕСЬ идет перечислений возможных учитываемых символов в строке, которые не указаны в поисании, в перечислении указаны не все, но и в задаче тоже есть косфк с указанием вводных данных по нему.
+    
+if pin_chek.include? x
+      pin_answ = false
+    end # проверяем пин код на наличие букв вместо цифрв
+if pin_chek.length == 4 or pin_chek.length == 6
+    pin_answ = pin_answ # проверяем количество символов в пинкоде
+else
+    pin_answ = false
+end
+
+end
+return pin_answ
+end
