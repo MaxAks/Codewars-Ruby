@@ -1,0 +1,5 @@
+def square_area_to_circle(size)
+  #your code here
+  sqr = (0.25*Math::PI*Math.sqrt(size)**2).round(8) # Обратить внимание как вызывается Математический метод числа ПИ
+return sqr
+end
