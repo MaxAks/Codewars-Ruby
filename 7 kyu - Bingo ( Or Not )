@@ -1,0 +1,9 @@
+def bingo(arr)
+  # wriite code here...
+  if arr.include? 9 and arr.include? 2 and arr.include? 14 and arr.include? 7 and arr.include? 15
+  # ВАЖНО include? проверяет только одно значение - через and надо повторять весь метод, а не только значения!!!
+    return "WIN"
+else
+   return "LOSE"
+end
+end
