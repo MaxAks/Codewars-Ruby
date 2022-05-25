@@ -1,0 +1,19 @@
+def vowel_indices(word)
+  # your code here
+word.downcase!
+word_w = word.each_char.to_a
+word_arr = []
+word_w.each_with_index do |name, index|
+
+=begin
+метод each_with_index тоже делает цикл по всем элементам массива, как each, 
+только добавляет возможность узнать индекс ИМЕННО по счету элемента  у текущего элемента в массиве.
+=end
+
+  if name == "a" or name==  "e" or name==  "i" or name==  "o" or name==  "u" or name == "y"
+    word_arr.push(index+1) # плюс 1 стот, чтобы уйти от нумерации элементов в массиве с 0 и перейти к привычной нумерации в строке с 1 буквы
+    else
+   end
+end
+return word_arr
+end
