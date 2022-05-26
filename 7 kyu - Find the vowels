@@ -1,7 +1,7 @@
 def vowel_indices(word)
   # your code here
 word.downcase!
-word_w = word.each_char.to_a
+word_w = word.each_char.to_a # each_char.to_a - МЕТОД служит для преобразование строки в массив
 word_arr = []
 word_w.each_with_index do |name, index|
 
