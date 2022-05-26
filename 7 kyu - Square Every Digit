@@ -1,0 +1,10 @@
+def square_digits num
+  # code goes here
+  num_arr = num.to_s.split('') # to_s - перевод в строку, split('') - разбиение числа - каждая цифра - как отдельный символ.
+num_arr_fin = []
+num_arr.each do |x|
+num_arr_fin.push((x.to_i)*(x.to_i)) # x.to_i - значение х вытаскивается как символ и сразу переводится в integer (числовое) и затем возводится
+# в квадрат, можно написать и короче было, пришло в голову только сейчас (x.to_i)**2
+end
+return num_arr_fin.join.to_i # join - объединяет весь массив в один элемент, to_i - переводит элемент в в integer (числовое)
+end
