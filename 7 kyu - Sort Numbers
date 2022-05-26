@@ -1,0 +1,8 @@
+def solution(nums)
+if nums != nil #Проверяем главное условие nill по переменной.
+nums_new = nums.sort
+  else
+   nums_new = []
+      end
+  return nums_new
+end
