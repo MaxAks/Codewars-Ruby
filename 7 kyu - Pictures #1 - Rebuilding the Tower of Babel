@@ -1,0 +1,11 @@
+height = 12
+if height <=0
+    puts ''
+else
+for i in 1..height
+3.times do puts "#{' '*(height-i)+'o'*i+'o'*(i-1)+' '*(height-i)}"
+# ' '*(height-i) - это добавление пробелов перед элементами башни и после них.
+# 'o'*i+'o'*(i-1) - прорисовка самой башни
+end
+end
+end
