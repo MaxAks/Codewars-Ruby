@@ -3,4 +3,13 @@ def mirror(data)
   # все кроме последнего элемента массива, в данном случае - это уже максимальный элемент массива, для массива [-8, 42, 18, 0, -16] получится
   # [-16, -8, 0, 18]
   # sort.reverse - переворачивает отсортированный массив.
+  
+=begin
+изначально было так, но потом сократил
+data_sort = data.sort
+data_sort.pop
+data_fin = data_sort + data.sort.reverse!
+return data_fin
+=end
+
 end
