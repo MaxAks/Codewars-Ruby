@@ -1,0 +1,5 @@
+def missing_no(nums)
+  # your code here
+  sum_nums = nums.inject {|sum=0, n| sum + n }
+  return 5050-sum_nums # 5050 - сумма всех целых чисел от 0 до 100 включительно исходя из задачи.
+end
