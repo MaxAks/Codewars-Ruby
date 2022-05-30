@@ -1,0 +1,18 @@
+def open_or_senior(data)
+  #your code here
+  data_fin = []
+  for i in (0...data.size) # ДИАПАЗОН УКАЗЫВАЕТСЯ С 3 ТОЧКАМИ для обычных интервалов for указывается с 2 точками!!!
+    if data.dig(i,0) >= 55 and data.dig(i,1) > 7
+=begin
+dig(*args) публичный
+Извлекает вложенное значение, заданное последовательностью ключевых объектов, вызывая dig на каждом шаге и возвращая nil , если какой-либо промежуточный шаг равен nil .
+=end
+    data_fin.push('Senior')
+else
+    data_fin.push('Open')
+end
+end
+  return data_fin
+end
+
+# ЭТУ задачу можно еще решить через map - посмотреть как это можно сделать!
