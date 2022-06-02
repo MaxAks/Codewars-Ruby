@@ -1,0 +1,49 @@
+# НИЖЕ РЕШЕНИЕ ДО РАЗБОРА МЕТОДА DELETE и ЗАТЕМ ДВА АЛЬТЕРНАТИВНЫХ РЕШЕНИЯ
+def ghostbusters(building)
+  #your code here
+building_fin = []
+if building.include? " " # Поиск пробела в строке и если он есть - то начинаем выполнять цикл заполнения нового массива без пробела
+building.each_char do |x|
+    if x != " " # если символ не пробел 
+       building_fin.push(x) # заносим его в новый массив
+    end
+end
+return building_fin.join # в конце объединяем весь массив
+else
+   return  "You just wanted my autograph didn't you?" # если в строке первоначальной нет пробела выводим фразу
+end
+end
+
+# ПЕРВОЕ РЕШЕНИЕ АЛЬТЕРНАТИВНОЕ - ПОСЛЕ РАЗБОРА МЕТОДА DELETE
+def ghostbusters(building)
+# Ниже выполняется тернарный оператор
+  building[" "] ? building.delete(" ") : "You just wanted my autograph didn't you?"
+=begin
+
+building[" "] - условие которое проверяет есть ли в строке пробел
+опсиание здесь https://ruby-doc.org/core-2.7.1/String.html#method-i-5B-5D
+
+building.delete(" ") - ИТЕРАЦИЯ - ЕСЛИ УСЛОВИЕ ВЫПОЛНЯЕТСЯ - метод delete - который удоляет из строки пробелы
+описание здесь https://ruby-doc.org/core-2.7.1/String.html#method-i-delete
+
+ФРАЗА выволится если условие не выполняется
+=end
+end
+
+# ВТОРОЕ РЕШЕНИЕ АЛЬТЕРНАТИВНОЕ - ПОСЛЕ РАЗБОРА МЕТОДА split
+def ghostbusters(building)
+  #your code here
+# Ниже выполняется тернарный оператор
+  building.include?(" ") ? building.split(" ").join : "You just wanted my autograph didn't you?"
+=begin
+
+building.include?(" ") - условие которое проверяет есть ли в строке пробел
+
+building.split(" ").join - ИТЕРАЦИЯ - ЕСЛИ УСЛОВИЕ ВЫПОЛНЯЕТСЯ - метод split - КОТОРЫЙ РАЗБИВАЕТ СТРОКУ НА ПОДМАССИВ ПО РАЗДЕЛИТЕЛЮ " " 
+И ПОЛУЧАЕТСЯ МАССИВ ИЗ ОТДЕЛЬНЫХ СЛОВ БЕЗ ПРОБЕЛА И ДАЛЕЕ МЕТОД join поторый пересобирает элементы нового подмассива в новую строку 
+уже без пробелов
+описание здесь https://ruby-doc.org/core-3.0.2/String.html#method-i-split
+
+ФРАЗА выволится если условие не выполняется
+=end
+end
