@@ -1,0 +1,17 @@
+def solve(arr)
+#...
+  voc_id = ("a".."z").to_a
+arr_fin = []
+arr_time = []
+count = 0
+arr.each do |x|
+arr_time = x.downcase.split(//)
+arr_time.each_with_index do |name, index|
+arr_time[index] == voc_id[index] ? count =count +1 : count = count
+end
+arr_fin.push(count)
+
+count = 0
+end
+return arr_fin
+end
