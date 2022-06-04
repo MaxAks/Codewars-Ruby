@@ -1,0 +1,13 @@
+# ПЕРВОЕ РЕШЕНИЕ
+def sum_two_smallest_numbers(numbers)
+  #Your code here
+  numbers.sort[0]+numbers.sort[1] # sort - сориртирует массив по возрастанию и выводятся элементы указанные в скобках
+end
+
+#ВТОРОЕ РЕШЕНИЕ, КОГДА ПОНЯЛ, ЧТО ХОЧУ ЕЩЕ КОРОЧЕ НАПИСАТЬ КОД И УЗНАЛ ПРО МЕТОДЫ min и sum
+def sum_two_smallest_numbers(numbers)
+  numbers.min(2).sum # min - ищет минимальный элемент массива, в скобках указано, количество минимальных элементов которые ищет метод
+  # подробнее здесь https://ruby-doc.org/core-3.1.0/Enumerable.html#method-i-min
+  # sum - суммирует возвращаемые элементы.
+  # подробнее здесь https://ruby-doc.org/core-3.1.0/Enumerable.html#method-i-sum
+end
