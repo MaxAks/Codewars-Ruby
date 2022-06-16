@@ -1,0 +1,22 @@
+def good_vs_evil(good, evil)
+  gb = [1, 2, 3, 3, 4, 10] # количество жизней у персонажа с текущим индексом для индекса 0 количество жизней - 1 и так далее
+  ge = [1, 2, 2, 2, 3, 5, 10] # Аналогично 
+  # g, e = 0, 0 - 
+  gg= good.split(/ /).to_a # разлеляем строку на отдельные значения и загоняем в массив
+  ee = evil.split(/ /).to_a # тоже самое
+  ge1 = gg.zip(gb).map{|x, y| x.to_i * y}.sum 
+=begin 
+объеденяем массивы  gg - количество персонажей , gb - количество жизней персонажа. В процессе обежинения перемножаем количество персонажей на их жизни
+zip - ПОДРОБНЕЕ ТУТ https://ruby-doc.org/core-2.4.0/Array.html#method-i-zip
+sum - суммируем значения всех элементов массива.
+=end
+  ge2 = ee.zip(ge).map{|x, y| x.to_i * y}.sum
+if ge1>ge2
+ res = "Battle Result: Good triumphs over Evil"
+ elsif ge1<ge2
+    res =  "Battle Result: Evil eradicates all trace of Good"
+ elsif ge1==ge2
+    res = "Battle Result: No victor on this battle field" 
+ end
+  return res
+end
